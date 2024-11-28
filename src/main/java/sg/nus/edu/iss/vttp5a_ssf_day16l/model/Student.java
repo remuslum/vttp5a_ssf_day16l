@@ -6,6 +6,9 @@ public class Student {
     private String email;
     private String phoneNumber;
     
+    public Student(){
+
+    }
     public Student(Integer id, String fullName, String email, String phoneNumber) {
         this.id = id;
         this.fullName = fullName;
@@ -37,6 +40,11 @@ public class Student {
         this.phoneNumber = phoneNumber;
     }
 
+    @Override
+    public String toString(){
+        return "" + id + "," + fullName + "," + email + "," + phoneNumber;
+    }
+
     // Unique code to identify each individual record
     @Override
     public int hashCode() {
@@ -48,6 +56,7 @@ public class Student {
         result = prime * result + ((phoneNumber == null) ? 0 : phoneNumber.hashCode());
         return result;
     }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -79,6 +88,5 @@ public class Student {
             return false;
         return true;
     }
-
     
 }
