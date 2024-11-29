@@ -36,6 +36,8 @@ public class StudentRestController {
         s.setFullName(jObject.getString("fullName"));
         s.setEmail(jObject.getString("email"));
         s.setPhoneNumber(jObject.getString("phoneNumber"));
+
+        return ResponseEntity.ok().body("true");
     }
     
     // @PostMapping()
